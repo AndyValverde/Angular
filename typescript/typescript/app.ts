@@ -5,8 +5,8 @@
   const edad = 23;
 
   const PERSONAJE = {
-    nombre: nombre,
-    edad: edad
+    nombre, // cuando tienes una propiedad con el valor de una variable se puede omitar
+    edad: edad// tambien podria quitarla de aqui pero para que se note la diferencia
   };
 
 
@@ -43,11 +43,13 @@
   //   * altura
   // También un método que calcule el área  =  base * altura,
   // ese método debe de retornar un numero.
-  class rectangulo {
+  class Rectangulo { //el nombre de las clases empieza en mayusculas
       constructor(public base : number, public altura : number){}
       calcularElArea() : number{
         return this.base * this.altura;
       }
+      // tambien se puede hacer como funcion de flecha
+      calculaArea = () : number => this.base * this.altura;
   }
 
 

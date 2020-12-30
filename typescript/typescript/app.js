@@ -3,8 +3,8 @@
     const nombre = 'Ricardo Tapia';
     const edad = 23;
     const PERSONAJE = {
-        nombre: nombre,
-        edad: edad
+        nombre,
+        edad: edad // tambien podria quitarla de aqui pero para que se note la diferencia
     };
     const batman = {
         nombre: 'Bruno Díaz',
@@ -31,10 +31,12 @@
     //   * altura
     // También un método que calcule el área  =  base * altura,
     // ese método debe de retornar un numero.
-    class rectangulo {
+    class Rectangulo {
         constructor(base, altura) {
             this.base = base;
             this.altura = altura;
+            // tambien se puede hacer como funcion de flecha
+            this.calculaArea = () => this.base * this.altura;
         }
         calcularElArea() {
             return this.base * this.altura;
