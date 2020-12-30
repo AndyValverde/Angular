@@ -3,6 +3,9 @@
         public nombre : string,
         public clave : string
     ){}
+    imprimir (){ // metodo para imprimir las propiedades
+        console.log(`${this.nombre} - ${this.clave}`);
+    }
 }
 class Xman2 { // esta no podria
     constructor(
