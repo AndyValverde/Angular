@@ -1,6 +1,2 @@
-
-
-
-const mensaje = 'Hola Mundo!';
-
-console.log( mensaje );
+const magneto = new Xmen();
+console.log(magneto);
