@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//rutas
+
+import {APP_ROUTING} from './app.routes'
+
+//components
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './src/components/home/home.component';
-import { NavbarComponent } from './src/components/share/navbar/navbar.component';
-import { AboutComponent } from './src/components/about/about.component';
-import { HeroesComponent } from './src/components/heroes/heroes.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/share/navbar/navbar.component';
+import { AboutComponent } from './components/about/about.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,8 @@ import { HeroesComponent } from './src/components/heroes/heroes.component';
     HeroesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
