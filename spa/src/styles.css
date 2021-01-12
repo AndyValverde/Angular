@@ -1,3 +1,8 @@
+
+/*Para que no se vea tan pegado en la parte de abajo*/
+body{
+  padding-bottom: 50px;
+}
 /*con  animated y fadeIn se hace una animación de recorrido y fast es para acelerar animación*/
 .animated {
     -webkit-animation-duration: 1s;
