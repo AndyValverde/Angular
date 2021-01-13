@@ -13,6 +13,8 @@
           <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary " >
               Ver más
           </button>
+          <!--Otra forma solo con link ya vimos esto -->
+          <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary "> Ver más link</a>
         </div>
     </div>
       
