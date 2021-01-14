@@ -2,20 +2,8 @@
 <hr>
 <!-- row-cols-md-3 divide en 3 columnas las tarjetas-->
 <div class="card-columns">
-    <!--animated fadeIn fast para agregar la animació-->
-    <div class="card animated fadeIn fast" style="width: 18rem;" *ngFor="let heroe of heroes; let i = index">
-        <img class="card-img-top" style="width: 18rem;" [src]="heroe.img" alt="{{heroe.nombre}}">
-        <div class="card-body"  >
-          <h5 class="card-title">{{heroe.nombre}}</h5>
-          <p class="card-text">{{heroe.bio}}</p>
-          <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-          <!--Modo de navegar por codigo de programación-->
-          <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary " >
-              Ver más
-          </button>
-          <!--Otra forma solo con link ya vimos esto -->
-          <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary "> Ver más link</a>
-        </div>
-    </div>
+    <!--heroe es la variable declarada en el heroe-tarjeta-component y heroeV es de la iteración"-->
+    <app-heroe-tarjeta (heroeSelect)="verHeroes($event)" [heroe]="heroeV" [index]="i" *ngFor="let heroeV of heroes; let i = index"></app-heroe-tarjeta>
+    
       
 </div>
