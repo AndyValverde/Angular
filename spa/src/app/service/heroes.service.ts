@@ -63,17 +63,18 @@ export class HeroesService {
     getHeroe(index : number){
         return this.heroes[index];
     }
-    BuscarHeroes(term : string) : heroe[]{
-        let heroes: heroe[];
+    buscarHeroes(term : string) : heroe[]{
+      //
+        let heroesB: heroe[]= [];
         let terminos = term.toUpperCase();
         for(let x of this.heroes){
-            let nombre = x.nombre.toUpperCase;
-            //nombre.prototype.indexOf(terminos)  compara si esta en el arreglo nombre
-            if(nombre.prototype.indexOf(terminos) >= 0){
-                heroes.push(x);
+            let nombre = x.nombre.toUpperCase();
+            //nombre.indexOf(terminos)  compara si esta en el nombre
+            if(nombre.indexOf(terminos) >= 0){
+                heroesB.push(x);
             }
         }
-        return heroes;
+        return heroesB;
     }
 
 }
