@@ -11,5 +11,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //esta es la funcion de busqueda
+  getHeroes(busqueda : string){
+    console.log(busqueda);
+
+  }
 
 }

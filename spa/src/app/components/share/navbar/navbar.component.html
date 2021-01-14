@@ -22,8 +22,10 @@
                   
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <!--#buscarHeroes es el alias del form-->
+          <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search" (keyup.enter)="getHeroes(buscarHeroes.value)" #buscarHeroes >
+          <!-- cambiamos el tipo a button para que no haga summit involuntario-->
+          <button (click)="getHeroes(buscarHeroes.value)" class="btn btn-outline-success" type="button">Search</button>
         </form>
       </div>
     </div>
