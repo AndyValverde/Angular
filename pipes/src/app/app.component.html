@@ -43,6 +43,24 @@
           <th>slice:1:5</th>
           <th>{{arreglo | slice:1:5}}</th>
         </tr>
+        <!--Se redonde el número con 3 decimales-->
+        <tr>
+          <th>{{PI}}</th>
+          <th>number</th>
+          <th>{{PI | number}}</th>
+        </tr>
+        <!--Rellena para que sean 2 digitos en la parte de enteros y redondea los decimales a 4 maximo-->
+        <tr>
+          <th>{{PI}}</th>
+          <th>number:"2.0-4</th>
+          <th>{{PI | number:"2.0-4"}}</th>
+        </tr>
+        <!--Se ajusta los enteros a la longitud ya definida-->
+        <tr>
+          <th>{{PI}}</th>
+          <th>number:".0-4</th>
+          <th>{{PI | number:".0-4"}}</th>
+        </tr>
 
 
 
