@@ -12,6 +12,13 @@
         </tr>
       </thead>
       <tbody>
+        <!--Mi propio pipe {{var | capitalizado:false}} por defecto es true osea que capitaliza cada labra andy val -> Andy Val si esta falso -> Andy val-->
+        <tr>
+          <th>{{nombreRaro}}</th>
+          <th>capitalizado</th>
+          <th>{{nombreRaro | capitalizado }}</th>
+        </tr>
+
         <!--prueba de pipes lowercase-->
         <tr>
           <th>{{nombre}}</th>
