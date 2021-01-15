@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { rejects } from 'assert';
-
 
 @Component({
   selector: 'app-root',
@@ -26,4 +24,6 @@ export class AppComponent {
   promesa = new Promise<string>((resolve) => {
     setTimeout(() => resolve('llego la data'),4500);
   });
+  fecha : Date = new Date();
+  idioma :string = 'es';
 }

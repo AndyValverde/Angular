@@ -97,6 +97,46 @@
           <th>async</th>
           <th>{{promesa  | async}}</th>
         </tr>
+        <!--Formato de fecha-->
+        <tr>
+          <th>{{fecha}}</th>
+          <th>date</th>
+          <th>{{fecha | date}}</th>
+        </tr>
+        <tr>
+          <!--Formato de fechas predefinidad-->
+          <th>{{fecha}}</th>
+          <th>date:"medium"</th>
+          <th>{{fecha | date:"medium"}}</th>
+        </tr>
+        <tr>
+          <th>{{fecha}}</th>
+          <th>date:"short"</th>
+          <th>{{fecha | date:"short"}}</th>
+        </tr>
+        <!--Formato de fecha particular-->
+        <tr>
+          <th>{{fecha}}</th>
+          <th>date:"MMMM -dd"</th>
+          <th>{{fecha | date:"MMMM -dd"}}</th>
+        </tr>
+        <!--Formato de fecha cambiando idioma a ingles-->
+        <tr>
+          <th>{{fecha}}</th>
+          <th>date:"MMMM -dd":"":"en"</th>
+          <th>{{fecha | date:"MMMM -dd":"":"en"}}</th>
+        </tr>
+        <!--Formato de fecha cambiando con botones-->
+        <tr>
+          <th>{{fecha}}</th>
+          <th>date:"MMMM -dd":"":'{{idioma}}''
+            <br>
+            <button (click)="idioma='es'" class="mr-1 btn btn-primary" >  Español</button>
+            <button (click)="idioma='en'"class="mr-1 btn btn-secondary" >Ingles</button>
+            <button (click)="idioma='fr'"class="mr-1 btn btn-success">Frances</button>
+          </th>
+          <th>{{fecha | date:"MMMM -dd":"":idioma}}</th>
+        </tr>
 
 
       </tbody>
