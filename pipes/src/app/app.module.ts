@@ -6,12 +6,16 @@ import localesEs from '@angular/common/locales/es';
 import localesFr from '@angular/common/locales/fr';
 //
 import { AppComponent } from './app.component';
+//import pipe
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
 //para cambiar el idioma
 registerLocaleData(localesEs);
 registerLocaleData(localesFr);
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //un pipe
+    CapitalizadoPipe
   ],
   imports: [
     BrowserModule
