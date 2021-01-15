@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { rejects } from 'assert';
+
 
 @Component({
   selector: 'app-root',
@@ -11,4 +13,17 @@ export class AppComponent {
   PI: number = Math.PI;
   porcentaje: number = 0.234;
   salario : number = 1234.5;
+  heroe = {//objeto
+    logan : "Logan",
+    clave : "wolverine",
+    edad: 500,
+    direccion : {//objeto dentro del objeto
+      calle: "primavera",
+      casa : 20
+    }
+  }
+  //esta promesa regresa un string!
+  promesa = new Promise<string>((resolve) => {
+    setTimeout(() => resolve('llego la data'),4500);
+  });
 }

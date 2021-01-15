@@ -91,6 +91,12 @@
           <th>currency:'EUR':"symbol":".0-1"</th>
           <th>{{salario | currency:'EUR':"symbol":".0-1"}}</th>
         </tr>
+        <!--el asincrono deja que se imprima el return de la promesa-->
+        <tr>
+          <th>{{promesa}}</th>
+          <th>async</th>
+          <th>{{promesa  | async}}</th>
+        </tr>
 
 
       </tbody>
@@ -100,5 +106,21 @@
   <ul>
     <li *ngFor="let item of arreglo | slice:0:2">{{item}}</li>
   </ul>
+  <h4>JSON</h4>
+  <hr>
+  <div class="row mb-5">
+    <!--este manda un tipo object object porque asi pasa cuando intentas un string de un objeto--> 
+    <div class="col">
+      {{heroe}}
+    </div>
+    <!--este manda literlmente lo que trae  el objeto solo que puede causar error por las funciones!-->
+    <div class="col">
+      <pre>
+        
+      {{heroe|json}}
+      </pre>
+    </div>
+
+  </div>
   </div>
 </div>
